@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create an account</title>
+  </head>
+<body>
+  <style>
+      .nav {
+        display: flex;
+        list-style: none;
+      }
+      li {
+        margin: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+    <h1>Create an account</h1>
+    First Name:
+    <input type="text" id="firstname" />
+    <br /><br />
+    Last Name:
+    <input type="text" id="lastname" />
+    <br /><br />
+    Email:
+    <input type="text" id="email" />
+    <br /><br />
+    password:
+    <input type="password" id="password" />
+    <br /><br />
+    <input type="submit" value="Creat Account" id="register" />
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+     <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyC7pQfTkot-WJnlzuCecpi2pTj-MfPV5FI",
+        authDomain: "project-1-kblasman.firebaseapp.com",
+        projectId: "project-1-kblasman",
+        storageBucket: "project-1-kblasman.appspot.com",
+        messagingSenderId: "686950021635",
+        appId: "1:686950021635:web:bcf634d0fba188436f2c36"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <script>
+
+      document.addEventListener("DOMContentLoaded", function() {
+        const firstname = document.getElementById("firstname");
+        const lastname = document.getElementById("lastname");
+        const email = document.getElementById("email");
+        const password = document.getElementById("password");
+        const register = document.getElementById("register");
+
+        const db = firebase.firestore();
+
+        function addUser(uid, first, last) {
+          db.collection("Users")
+            .doc(uid)
+            .set({
+              firstname: first,
+              lastname: last,
+              user: uid,
+              timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+            })
+            .then(function () {
+              console.log("User added to database!");
+            })
+            .catch(function (error) {
+              console.error(error);
+            });
+        }
+        // waits for both email and password to submit
+        register.addEventListener("click", function () {
+          if (email.value && password.value) {
+            firebase
+              .auth()
+              .createUserWithEmailAndPassword(email.value, password.value)
+              .then(function (data) {
+                console.log("data", data);
+              })
+              .catch(function (error) {
+                console.error(error);
+              })
+          }
+        })
+      })
+    </script>
+  </body>
+</html>
