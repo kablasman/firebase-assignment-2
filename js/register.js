@@ -3,16 +3,34 @@ document.addEventListener("DOMContentLoaded", function() {
     const lastname = document.getElementById("lastname");
     const email = document.getElementById("email");
     const password = document.getElementById("password");
+    const tel = document.getElementById("tel");
+    const city = document.getElementById("city");
+    const country = document.getElementById("country");
+    const profession = document.getElementById("profession");
+    const summary = document.getElementById("summary");
     const register = document.getElementById("register");
 
     const db = firebase.firestore();
 
-    function addUser(uid, first, last) {
+    function addUser(uid, first, last, tel, city, country, profx, summary) {
+
+        console.log(profx)
+        console.log(tel)
+        console.log(city)
+        console.log(country)
+        console.log(profession)
+        console.log(summary)
+     
       db.collection("Users")
         .doc(uid)
         .set({
           firstname: first,
           lastname: last,
+          Tel: tel,
+          city: city,
+          country: country,
+          Profession: profx,
+          summary: summary,
           user: uid,
           timestamp: firebase.firestore.FieldValue.serverTimestamp(),
         })
@@ -25,6 +43,9 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     // waits for both email and password to submit
     register.addEventListener("click", function () {
+      const profx = [...profession.selectedOptions]
+      .map(option => option.value);
+
       if (email.value && password.value) {
         firebase
           .auth()
@@ -32,7 +53,9 @@ document.addEventListener("DOMContentLoaded", function() {
           .then(function (data) {
             console.log("data", data);
             const user = firebase.auth().currentUser;
-            addUser(user.uid, firstname.value, lastname.value);
+            const profx = [...profession.selectedOptions]
+            .map(option => option.value);
+            addUser(user.uid, firstname.value, lastname.value, tel.value, city.value, country.value, profx, summary.value);
           })
           .catch(function (error) {
             console.error(error);
