@@ -40,7 +40,7 @@
     <br /><br />
     <input type="submit" value="Creat Account" id="register" />
     <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
 
@@ -50,12 +50,12 @@
      <script>
       // Your web app's Firebase configuration
       var firebaseConfig = {
-        apiKey: "AIzaSyC7pQfTkot-WJnlzuCecpi2pTj-MfPV5FI",
-        authDomain: "project-1-kblasman.firebaseapp.com",
-        projectId: "project-1-kblasman",
-        storageBucket: "project-1-kblasman.appspot.com",
-        messagingSenderId: "686950021635",
-        appId: "1:686950021635:web:bcf634d0fba188436f2c36"
+        apiKey: "AIzaSyCGJSpEFQbphdoGy4Q8vhoretZp8zUU__Q",
+        authDomain: "fir-assignment-2.firebaseapp.com",
+        projectId: "fir-assignment-2",
+        storageBucket: "fir-assignment-2.appspot.com",
+        messagingSenderId: "83437304546",
+        appId: "1:83437304546:web:1f896bbdb30866b80afcbb"
       };
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
@@ -95,6 +95,8 @@
               .createUserWithEmailAndPassword(email.value, password.value)
               .then(function (data) {
                 console.log("data", data);
+                const user = firebase.auth().currentUser;
+                addUser(user.uid, firstname.value, lastname.value);
               })
               .catch(function (error) {
                 console.error(error);
