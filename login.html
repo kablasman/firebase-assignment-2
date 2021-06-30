@@ -5,15 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>login</title>
-    <style>
-      .nav {
-        display: flex;
-        list-style: none;
-      }
-      li {
-        margin: 4px;
-      }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <nav>
@@ -39,53 +31,8 @@
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="./js/firebase_connect.js"> </script>
 
-    <script>
-      // Your web app's Firebase configuration
-      var firebaseConfig = {
-        apiKey: "AIzaSyCPUMVOXgiL2Gtofc6axhKUygi7ybzjECo",
-        authDomain: "wddm-120.firebaseapp.com",
-        projectId: "wddm-120",
-        storageBucket: "wddm-120.appspot.com",
-        messagingSenderId: "304346065569",
-        appId: "1:304346065569:web:43d36c14b396a7a9e99ee0",
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-    </script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const email = document.getElementById("email");
-        const password = document.getElementById("password");
-        const login = document.getElementById("login");
-
-        login.addEventListener("click", function () {
-          if (email.value && password.value) {
-            firebase
-              .auth()
-              .signInWithEmailAndPassword(email.value, password.value)
-              .then(function (data) {
-                const user = firebase.auth().currentUser;
-              })
-              .catch(function (error) {
-                console.error(error);
-              });
-
-              firebase.auth().onAuthStateChanged(function(user) {
-                if (user) {
-                  window.location = "index.html";
-                } 
-                // if (user) {
-                //   firebase.auth().signOut();
-                // }
-                // else {
-                //   window.location = "login.html";
-                // }
-              })
-          }
-        });
-      });
-    </script>
+    <script src="./js/login.js"></script>
   </body>
 </html>

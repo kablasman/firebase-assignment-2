@@ -4,18 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Create an account</title>
-  </head>
-<body>
-  <style>
-      .nav {
-        display: flex;
-        list-style: none;
-      }
-      li {
-        margin: 4px;
-      }
-    </style>
   </head>
   <body>
     <nav>
@@ -47,63 +37,7 @@
     <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 
-     <script>
-      // Your web app's Firebase configuration
-      var firebaseConfig = {
-        apiKey: "AIzaSyCGJSpEFQbphdoGy4Q8vhoretZp8zUU__Q",
-        authDomain: "fir-assignment-2.firebaseapp.com",
-        projectId: "fir-assignment-2",
-        storageBucket: "fir-assignment-2.appspot.com",
-        messagingSenderId: "83437304546",
-        appId: "1:83437304546:web:1f896bbdb30866b80afcbb"
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-    </script>
-    <script>
-
-      document.addEventListener("DOMContentLoaded", function() {
-        const firstname = document.getElementById("firstname");
-        const lastname = document.getElementById("lastname");
-        const email = document.getElementById("email");
-        const password = document.getElementById("password");
-        const register = document.getElementById("register");
-
-        const db = firebase.firestore();
-
-        function addUser(uid, first, last) {
-          db.collection("Users")
-            .doc(uid)
-            .set({
-              firstname: first,
-              lastname: last,
-              user: uid,
-              timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-            })
-            .then(function () {
-              console.log("User added to database!");
-            })
-            .catch(function (error) {
-              console.error(error);
-            });
-        }
-        // waits for both email and password to submit
-        register.addEventListener("click", function () {
-          if (email.value && password.value) {
-            firebase
-              .auth()
-              .createUserWithEmailAndPassword(email.value, password.value)
-              .then(function (data) {
-                console.log("data", data);
-                const user = firebase.auth().currentUser;
-                addUser(user.uid, firstname.value, lastname.value);
-              })
-              .catch(function (error) {
-                console.error(error);
-              })
-          }
-        })
-      })
-    </script>
+    <script src="./js/firebase_connect.js"> </script>
+    <script src="./js/register.js"></script>
   </body>
 </html>

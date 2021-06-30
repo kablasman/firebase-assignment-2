@@ -5,15 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home page</title>
-    <style>
-      .nav {
-        display: flex;
-        list-style: none;
-      }
-      li {
-        margin: 4px;
-      }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <nav>
@@ -32,29 +24,8 @@
     <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 
-    <script>
-      // Your web app's Firebase configuration
-      var firebaseConfig = {
-        apiKey: "AIzaSyCPUMVOXgiL2Gtofc6axhKUygi7ybzjECo",
-        authDomain: "wddm-120.firebaseapp.com",
-        projectId: "wddm-120",
-        storageBucket: "wddm-120.appspot.com",
-        messagingSenderId: "304346065569",
-        appId: "1:304346065569:web:43d36c14b396a7a9e99ee0",
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-    </script>
+    <script src="./js/firebase_connect.js"> </script>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        firebase.auth().onAuthStateChanged(function (user) {
-          console.log("user", user);
-          if (user) {
-            firebase.auth().signOut();
-          }
-        });
-      });
-    </script>
+    <script src="./js/logout.js"> </script>
   </body>
 </html>
