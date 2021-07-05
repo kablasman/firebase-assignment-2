@@ -1,8 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+
+nav {
+  color: white;
+}
+
+header {
+  background-color: #313131;
+  margin: 0;
+  border: 1px solid #0fffcf;
+}
+
+body {
+  background-color: #6e6e6e;
+}
+
+h1 {
+  margin: auto;
+  text-align: center;
+  padding: 1em;
+  font-family: 'Kanit', sans-serif;
+  font-size: 2.4em;
+}
+
+li {
+  margin: 4px;
+}
+
+ul  {
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.home {
+  margin-bottom: 10em;
+}
+
+.body-home {
+  font-family: 'Work Sans', sans-serif;
+  background-image: url(../img/marjan-blan-marjanblan-9tqAeLDQT-o-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  margin: auto;
+}
+
+.body-login {
+  font-family: 'Work Sans', sans-serif;
+  background-color: #6e6e6e;
+  background-image: url(../img/marjan-blan-marjanblan-9tqAeLDQT-o-unsplash.jpg);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  margin: auto;
+  height: 100vh;
+}
+
+.body-reg {
+  font-family: 'Work Sans', sans-serif;
+  background-color: #6e6e6e;
+  background-image: url(../img/marjan-blan-marjanblan-9tqAeLDQT-o-unsplash.jpg);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  margin: auto;
+}
+
+.body-reg h1 {
+  font-size: 2.2em;
+}
+
+.body-login h1 {
+  font-size: 2.2em; 
+}
+
 .nav {
-    display: flex;
-    list-style: none;
-  }
-  li {
-    margin: 4px;
-  }
+  display: flex;
+  list-style: none;
+  padding: 1em;
+  justify-content: space-around;
+}
+
+.welcome-button input {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  font-family: 'Work Sans', sans-serif;
+}
+
+div .welcome-button {
+  text-align: center;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+div #register {
+  text-align: center;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+input {
+  color: white;
+}
+
+.register-form {
+  margin: 0 5em;
+  padding-bottom: 4em;
+}
+
+.register-form input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  padding: 0.4em;
+  width: 60%;
+}
+
+.register-form select {
+  background-color: #313131;
+  color: white;
+  padding: 0.4em 1em;
+  border: 1px solid white;
+  border-radius: 3em;
+}
+
+.register-form textarea {
+  display: inline-block;
+  background-color: #313131;
+  color: white;
+  border: 1px solid white;
+  border-radius: 1em;
+  height: 8em;
+  width: 100%;
+}
+
+.login-form {
+  margin: 0 5em; 
+}
+
+.login-form input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  padding: 0.4em;
+  width: 100%;
+}
+
+.login-form button {
+  text-align: center;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+p .formfield {
+  margin: auto;
+}
+
+.formfield label {
+  padding: 1em 0;
+}
+
+p textarea {
+  margin: 0;
+}
+
+.select-form {
+  padding: 0.9em 0;
+  padding-bottom: 0;
+}
+
+.formfield * {
+  vertical-align: middle;
+}
+
+.login-form {
+  margin: auto;
+  width: 40%;
+  margin-bottom: 2em;
+  align-items: center;
+}
+
+.welcome-hr {
+  width: 65%;
+  margin-top: 4em;
+  border-bottom: none;
+  border-top: 1px solid white;
+
+}
+
+button input {
+  align-content: center;
+}
+
+#register {
+  margin: 0 3em;
+  border: 1px solid #0fffcf;
+  background-color: #313131;
+  color: white;
+  border-radius: 2em;
+  box-shadow: 0px 1px 3px black;
+  padding: 0.6em;
+  align-items: center;
+  width: 9em;
+  margin: auto;
+}
+
+#login {
+  margin: 0 3em;
+  border: 1px solid #0fffcf;
+  background-color: #313131;
+  color: white;
+  border-radius: 2em;
+  box-shadow: 0px 1px 3px black;
+  padding: 0.6em;
+  align-items: center;
+  width: 9em;
+  text-align: center;
+  margin: auto;
+}
   
