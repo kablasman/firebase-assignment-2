@@ -190,6 +190,11 @@ p textarea {
   vertical-align: middle;
 }
 
+input::placeholder {
+  color: #808080;
+  font-family: 'Work Sans', sans-serif;
+}
+
 .login-form {
   margin: auto;
   width: 40%;
