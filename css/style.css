@@ -119,7 +119,7 @@ input {
 }
 
 .register-form {
-  margin: 0 5em;
+  margin: 0 8em;
   padding-bottom: 4em;
 }
 
@@ -175,6 +175,10 @@ p .formfield {
 }
 
 .formfield label {
+  padding: 1em 0;
+}
+
+.select-form label {
   padding: 1em 0;
 }
 
