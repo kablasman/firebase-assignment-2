@@ -7,47 +7,58 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Create a Profile</title>
   </head>
-  <body>
-    <nav>
-      <ul class="nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="register.html">Register</a></li>
-        <li><a href="login.html">Login</a></li>
-      </ul>
-    </nav>
+  <body class="body-reg">
+    <header>
+      <nav>
+        <ul class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </header>
     <h1>Create Your Profile</h1>
-    First Name:
-    <input type="text" id="firstname" />
-    <br /><br />
-    Last Name:
-    <input type="text" id="lastname" />
-    <br /><br />
-    Email:
-    <input type="text" id="email" />
-    <br /><br />
-    password:
-    <input type="password" id="password" />
-    <br /><br />
-    <label for="tel">Enter a phone number:</label>
-    <input type="tel" id="tel" name="tel" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required><br/><br/>
-    <label for="city">Enter Your City:</label>
-    <input type="text" id="city" name="city" placeholder="City" required><br/><br/>
-    <label for="country">Enter Your Country:</label>
-    <input type="text" id="country" name="country" placeholder="" required><br/><br/>
+    <div class="register-form">
+      First Name:
+      <input type="text" id="firstname" />
+      <br /><br />
+      Last Name:
+      <input type="text" id="lastname" />
+      <br /><br />
+      Email:
+      <input type="text" id="email" />
+      <br /><br />
+      Password:
+      <input type="password" id="password" />
+      <br /><br />
+      <label for="tel">Enter a phone number:</label>
+      <input type="tel" id="tel" name="tel" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required><br/><br/>
+      <label for="city">Enter Your City:</label>
+      <input type="text" id="city" name="city" placeholder="City" required><br/><br/>
+      <label for="country">Enter Your Country:</label>
+      <input type="text" id="country" name="country" placeholder="" required><br/><br/>
 
-    <label for="profession">Select Your Domain:</label>
-    <select name="profession" id="profession" multiple>
-      <option value="Graphic-Designer">Graphic Designer</option>
-      <option value="BackEnd-Web-Developer">BackEnd Web Developer</option>
-      <option value="FrontEnd-Web-Developer">FrontEnd Web Developer</option>
-      <option value="Mobile-App-Developer">Mobile App Developer</option>
-    </select><br></body><br>
+      <div class="select-form">
+        <label for="profession">Select Your Domain:</label>
+        <select name="profession" id="profession">
+          <option value="Graphic-Designer">Graphic Designer</option>
+          <option value="BackEnd-Web-Developer">BackEnd Web Developer</option>
+          <option value="FrontEnd-Web-Developer">FrontEnd Web Developer</option>
+          <option value="Mobile-App-Developer">Mobile App Developer</option>
+        </select><br></body><br>
+      </div>
 
-    <label for="summary">Summary About your Self:</label>
-    <textarea id="summary" name="summary" rows="4" cols="50">
-    </textarea></html><br></br>
-
-    <input type="submit" value="Creat Account" id="register" />
+      <p class="formfield">
+        <label for="summary">Summary About your Self:</label>
+        <br /><br />
+        <textarea id="summary" name="summary" rows="4" cols="50">
+        </textarea></html><br></br>
+      </p>
+      
+      <div>
+        <input type="submit" value="Creat Account" id="register" />
+      </div>
+    </div>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>

@@ -4,37 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Home page</title>
-    <style>
-      .nav {
-        display: flex;
-        list-style: none;
-      }
-      li {
-        margin: 4px;
-      }
-    </style>
   </head>
-  <body>
+  <body class="body-home">
     <!--this allows you to sign out the user-->
-    <nav id="auth">
-      <ul class="nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="account.html">Register</a></li>
-        <li><a href="login.html">Login</a></li>
-      </ul>
-    </nav>
-    <nav id="no-auth">
-      <ul class="nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="register.html">Register</a></li>
-        <li><a href="login.html">Login</a></li>
-      </ul>
-    </nav>
+    <header class="home">
+      <nav id="auth">
+        <ul class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="account.html">Register</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+      <nav id="no-auth">
+        <ul class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </header>
 
     <h1>Welcome!</h1>
 
-    <input type="submit" value="Creat Account" id="register" />
+    <div>
+      <button class="welcome-button">
+        <a href="register.html"><input type="submit" value="Create Account" id="register"/></a>
+      </button>
+    </div>
+    <hr class="welcome-hr">
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
