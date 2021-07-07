@@ -62,4 +62,10 @@ document.addEventListener("DOMContentLoaded", function() {
           })
       }
     })
-  })
+})
+
+// button effect
+
+let regButton = document.querySelector('#register')
+
+regButton.addEventListener('click', () => regButton.style.backgroundColor = '#000') 

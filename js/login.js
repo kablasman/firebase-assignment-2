@@ -28,4 +28,10 @@ document.addEventListener("DOMContentLoaded", function () {
           })
       }
     });
-  });
+});
+
+// button effect
+
+let loginButton = document.querySelector('#login')
+
+loginButton.addEventListener('click', () => loginButton.style.backgroundColor = '#000') 

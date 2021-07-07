@@ -15,4 +15,10 @@ document.addEventListener("DOMContentLoaded", function () {
         noAuth.style.display = "block";
       }
     });
-  });
+});
+
+// button effect
+
+let homeButton = document.querySelector('#register')
+
+homeButton.addEventListener('click', () => homeButton.style.backgroundColor = '#000') 
