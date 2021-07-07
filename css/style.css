@@ -58,7 +58,7 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
   color: white;
-  margin: auto;
+  margin: 0;
   height: 100vh;
 }
 
@@ -70,7 +70,8 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
   color: white;
-  margin: auto;
+  height: 100vh;
+  margin: 0;
 }
 
 .body-reg h1 {
@@ -119,8 +120,9 @@ input {
 }
 
 .register-form {
-  margin: 0 8em;
-  padding-bottom: 4em;
+  margin: auto;
+  padding: 3em;
+  max-width: 40em;
 }
 
 .register-form input {
@@ -145,12 +147,8 @@ input {
   color: white;
   border: 1px solid white;
   border-radius: 1em;
-  height: 8em;
+  height: 10em;
   width: 100%;
-}
-
-.login-form {
-  margin: 0 5em; 
 }
 
 .login-form input {
@@ -202,9 +200,9 @@ input::placeholder {
 
 .login-form {
   margin: auto;
-  width: 40%;
-  margin-bottom: 2em;
+  width: 80%;
   align-items: center;
+  max-width: 30em;
 }
 
 .welcome-hr {
