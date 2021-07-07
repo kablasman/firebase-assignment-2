@@ -48,6 +48,7 @@ a {
   background-repeat: no-repeat;
   color: white;
   margin: auto;
+  height: 100vh;
 }
 
 .body-login {
