@@ -41,6 +41,12 @@ a {
   margin-bottom: 10em;
 }
 
+.logo {
+  margin: auto;
+  text-align: center;
+  width: 10em;
+}
+
 .body-home {
   font-family: 'Work Sans', sans-serif;
   background-image: url(../img/marjan-blan-marjanblan-9tqAeLDQT-o-unsplash.jpg);
@@ -86,7 +92,7 @@ a {
 .nav {
   display: flex;
   list-style: none;
-  padding: 1em;
+  padding: 2em;
   justify-content: space-around;
 }
 
