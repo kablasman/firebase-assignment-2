@@ -128,7 +128,7 @@ input {
 
 .register-form {
   margin: auto;
-  padding: 3em;
+  padding-bottom: 3em;
   max-width: 40em;
 }
 
