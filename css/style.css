@@ -201,6 +201,18 @@ input {
   grid-column-end: 2;
 }
 
+.avatar {
+  grid-row-start: 5;
+  grid-row-end: 5;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  padding: 2em 0;
+}
+
+.avatar input {
+  margin-top: 0.8em;
+}
+
 .register-form {
   margin: auto;
   padding: 0 3em;
@@ -230,7 +242,7 @@ input {
   border: 1px solid white;
   border-radius: 1em;
   height: 8em;
-  width: 99%;
+  width: 100%;
 }
 
 .login-form input {
@@ -268,6 +280,10 @@ p textarea {
 
 .select-form {
   padding-top: 2em;
+  grid-row-start: 4;
+  grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 3;
 }
 
 .formfield * {
@@ -382,17 +398,18 @@ button input {
   .reg-form-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    column-gap: 3em;
   }
 
   .register-form input {
-    width: 90%;
+    width: 100%;
   }
 
   .select-form {
-    grid-row-start: 4;
-    grid-row-end: 4;
-    grid-column-start: 2;
-    grid-column-end: 3;
     padding-top: 0;
+  }
+
+  .avatar input {
+    width: 100%;
   }
 }
