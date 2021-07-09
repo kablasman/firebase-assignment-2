@@ -19,33 +19,56 @@
     </header>
     <h1>Create Your Profile</h1>
     <div class="register-form">
-      First Name:
-      <input type="text" id="firstname" placeholder="Jane"/>
-      <br /><br />
-      Last Name:
-      <input type="text" id="lastname" placeholder="Doe"/>
-      <br /><br />
-      Email:
-      <input type="text" id="email" placeholder="jane.doe@email.com"/>
-      <br /><br />
-      Password:
-      <input type="password" id="password" placeholder="*******************"/>
-      <br /><br />
-      <label for="tel">Enter a phone number:</label>
-      <input type="tel" id="tel" name="tel" placeholder="(226) 459 678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required><br/><br/>
-      <label for="city">Enter your city:</label>
-      <input type="text" id="city" name="city" placeholder="Toronto" required><br/><br/>
-      <label for="country">Enter your country:</label>
-      <input type="text" id="country" name="country" placeholder="Canada" required><br/><br/>
+      <div class="reg-form-container">
+        <div class="first-name">
+          <label>First Name:</label>
+          <input type="text" id="firstname" placeholder="Jane"/>
+          <br /><br />
+        </div>
 
-      <div class="select-form">
-        <label for="profession">Select your domain:</label>
-        <select name="profession" id="profession">
-          <option value="Graphic-Designer">Graphic Designer</option>
-          <option value="BackEnd-Web-Developer">BackEnd Web Developer</option>
-          <option value="FrontEnd-Web-Developer">FrontEnd Web Developer</option>
-          <option value="Mobile-App-Developer">Mobile App Developer</option>
-        </select><br></body><br>
+        <div class="last-name">
+          <label>Last Name:</label>
+          <input type="text" id="lastname" placeholder="Doe"/>
+          <br /><br />
+        </div>
+
+        <div class="email">
+          <label>Email:</label>
+          <input type="text" id="email" placeholder="jane.doe@email.com"/>
+          <br /><br />
+        </div>
+
+        <div class="pass">
+          <label>Password:</label>
+          <input type="password" id="password" placeholder="*******************"/>
+          <br /><br />
+        </div>
+
+        <div class="phone">
+          <label for="tel">Phone:</label>
+          <input type="tel" id="tel" name="tel" placeholder="(226) 459 678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required><br/><br/>
+        </div>
+
+        <div class="city">
+          <label for="city">City:</label>
+          <input type="text" id="city" name="city" placeholder="Toronto" required>
+          <br/><br/>
+        </div>
+
+        <div class="country">
+          <label for="country">Country:</label>
+          <input type="text" id="country" name="country" placeholder="Canada" required>
+        </div>
+
+        <div class="select-form">
+          <label for="profession">Select your domain:</label>
+          <select name="profession" id="profession">
+            <option value="Graphic-Designer">Graphic Designer</option>
+            <option value="BackEnd-Web-Developer">BackEnd Web Developer</option>
+            <option value="FrontEnd-Web-Developer">FrontEnd Web Developer</option>
+            <option value="Mobile-App-Developer">Mobile App Developer</option>
+          </select><br/><br/>
+        </div>
       </div>
 
       <p class="formfield">
