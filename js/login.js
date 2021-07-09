@@ -35,3 +35,14 @@ document.addEventListener("DOMContentLoaded", function () {
 let loginButton = document.querySelector('#login')
 
 loginButton.addEventListener('click', () => loginButton.style.backgroundColor = '#000') 
+
+// pre loader 
+
+const loaderWrapper = document.querySelector('.loader-wrapper')
+const preLoader = document.querySelector('.loader')
+
+setTimeout(function() {
+  loaderWrapper.style.display = 'none';
+  preLoader.style.display = 'none';
+
+}, 2000);
