@@ -7,7 +7,7 @@
     <title>Account</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body class="body-account">
     <header>
       <nav>
         <ul class="nav">
@@ -18,13 +18,22 @@
       </nav>
     </header>
     <h1>Account</h1>
-    First Name:
-    <input type="text" id="firstname" />
-    <br /><br />
-    Last Name:
-    <input type="text" id="lastname" />
-    <br /><br />
-    <input type="submit" value="Update" id="update" />
+
+    <div class="account-form">
+      First Name:
+      <input type="text" id="firstname" placeholder="Jane"/>
+      <br /><br />
+      Last Name:
+      <input type="text" id="lastname" placeholder="Doe"/>
+      <br /><br />
+      <button>
+        <input type="submit" value="Update" id="update" />
+      </button>
+    </div>
+
+    <div class="loader-wrapper">
+      <div class="loader"></div>
+    </div>
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
