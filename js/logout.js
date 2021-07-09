@@ -6,3 +6,15 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+
+//pre loader 
+
+const loaderWrapper = document.querySelector('.loader-wrapper')
+const preLoader = document.querySelector('.loader')
+
+setTimeout(function() {
+  loaderWrapper.style.display = 'none';
+  preLoader.style.display = 'none';
+
+}, 2000);

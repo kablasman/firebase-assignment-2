@@ -79,6 +79,30 @@ a {
   margin: 0;
 }
 
+.body-account {
+  font-family: 'Work Sans', sans-serif;
+  background-color: #6e6e6e;
+  background-image: url(../img/marjan-blan-marjanblan-9tqAeLDQT-o-unsplash.jpg);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  margin: 0;
+  height: 100vh;
+}
+
+.body-logout {
+  font-family: 'Work Sans', sans-serif;
+  background-color: #6e6e6e;
+  background-image: url(../img/marjan-blan-marjanblan-9tqAeLDQT-o-unsplash.jpg);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  margin: 0;
+  height: 100vh;
+}
+
 .body-reg h1 {
   font-size: 2.2em;
 }
@@ -208,6 +232,30 @@ input::placeholder {
   width: 80%;
   align-items: center;
   max-width: 30em;
+}
+
+.account-form {
+  margin: auto;
+  width: 80%;
+  align-items: center;
+  max-width: 30em;
+}
+
+.account-form button {
+  text-align: center;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+.account-form input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  padding: 0.5em 0;
+  padding-top: 0.8em;
+  width: 100%;
 }
 
 .welcome-hr {
