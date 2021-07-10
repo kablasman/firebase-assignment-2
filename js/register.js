@@ -1,3 +1,20 @@
+// button effect
+
+let regButton = document.querySelector('#register')
+
+regButton.addEventListener('click', () => regButton.style.backgroundColor = '#000') 
+
+// pre loader 
+
+const loaderWrapper = document.querySelector('.loader-wrapper')
+const preLoader = document.querySelector('.loader')
+
+setTimeout(function() {
+  loaderWrapper.style.display = 'none';
+  preLoader.style.display = 'none';
+
+}, 2000);
+
 document.addEventListener("DOMContentLoaded", function() {
     const firstname = document.getElementById("firstname");
     const lastname = document.getElementById("lastname");
@@ -97,20 +114,3 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     })
 })
-
-// button effect
-
-let regButton = document.querySelector('#register')
-
-regButton.addEventListener('click', () => regButton.style.backgroundColor = '#000') 
-
-// pre loader 
-
-const loaderWrapper = document.querySelector('.loader-wrapper')
-const preLoader = document.querySelector('.loader')
-
-setTimeout(function() {
-  loaderWrapper.style.display = 'none';
-  preLoader.style.display = 'none';
-
-}, 2000);
