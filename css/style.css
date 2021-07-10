@@ -148,6 +148,71 @@ input {
   color: white;
 }
 
+.reg-form-container {
+  display: block;
+}
+
+.first-name {
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.last-name {
+  grid-row-start: 1;
+  grid-row-end: 1;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.email {
+  grid-row-start: 2;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.pass {
+  grid-row-start: 2;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.phone {
+  grid-row-start: 3;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.city {
+  grid-row-start: 3;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.country {
+  grid-row-start: 4;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.avatar {
+  grid-row-start: 5;
+  grid-row-end: 5;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  padding: 2em 0;
+}
+
+.avatar input {
+  margin-top: 0.8em;
+}
+
 .register-form {
   margin: auto;
   padding: 0 3em;
@@ -160,7 +225,7 @@ input {
   border: none;
   border-bottom: 1px solid white;
   padding: 0.4em;
-  width: 60%;
+  width: 100%;
 }
 
 .register-form select {
@@ -177,7 +242,7 @@ input {
   border: 1px solid white;
   border-radius: 1em;
   height: 8em;
-  width: 99%;
+  width: 100%;
 }
 
 .login-form input {
@@ -205,8 +270,8 @@ p .formfield {
   padding: 1em 0;
 }
 
-.select-form label {
-  padding: 1em 0;
+#profession {
+  margin-top: 1em;
 }
 
 p textarea {
@@ -214,8 +279,11 @@ p textarea {
 }
 
 .select-form {
-  padding: 0.9em 0;
-  padding-bottom: 0;
+  padding-top: 2em;
+  grid-row-start: 4;
+  grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 3;
 }
 
 .formfield * {
@@ -323,4 +391,25 @@ button input {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+@media screen and (min-width: 45em) {
+  
+  .reg-form-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3em;
+  }
+
+  .register-form input {
+    width: 100%;
+  }
+
+  .select-form {
+    padding-top: 0;
+  }
+
+  .avatar input {
+    width: 100%;
+  }
 }
