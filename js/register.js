@@ -9,10 +9,16 @@ document.addEventListener("DOMContentLoaded", function() {
     const profession = document.getElementById("profession");
     const summary = document.getElementById("summary");
     const register = document.getElementById("register");
+    const avatar = document.getElementById("avatar");
+    let file = ""
+    let filename = ""
+    let extention = ""
+    const fbFolder = "avaters";
+
 
     const db = firebase.firestore();
 
-    function addUser(uid, first, last, tel, city, country, profx, summary) {
+    function addUser(uid, first, last, tel, city, country, profx, avatarImg, summary) {
 
         console.log(profx)
         console.log(tel)
@@ -30,9 +36,10 @@ document.addEventListener("DOMContentLoaded", function() {
           city: city,
           country: country,
           Profession: profx,
+          Avatar: avatarImg,
           summary: summary,
           user: uid,
-          timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+          timestamp: firebase.firestore.FieldValue.serverTimestamp()
         })
         .then(function () {
           console.log("User added to database!");
@@ -41,8 +48,21 @@ document.addEventListener("DOMContentLoaded", function() {
           console.error(error);
         });
     }
+
+
+    //  the file upload button
+    avatar.addEventListener("change", function (e) {
+      file = e.target.files[0]
+      filename = file.name.split(".").shift()
+      extention = file.name.split(".").pop()
+    })
+
     // waits for both email and password to submit
     register.addEventListener("click", function () {
+
+
+
+
       const profx = [...profession.selectedOptions]
       .map(option => option.value);
 
@@ -52,10 +72,24 @@ document.addEventListener("DOMContentLoaded", function() {
           .createUserWithEmailAndPassword(email.value, password.value)
           .then(function (data) {
             console.log("data", data);
-            const user = firebase.auth().currentUser;
-            const profx = [...profession.selectedOptions]
-            .map(option => option.value);
-            addUser(user.uid, firstname.value, lastname.value, tel.value, city.value, country.value, profx, summary.value);
+            let user = firebase.auth().currentUser;
+            const profx = [...profession.selectedOptions].map(option => option.value);
+
+            // ===========================================================================
+            //  Uploading the user's Avatar image into firebase storage
+            const avatarImg = ""
+            if (filename) {         
+              //  Create a storage ref
+              const storageRef = firebase
+                  .storage()
+                  .ref(`${fbFolder}/${user.uid}.${extention}`);
+                  const avatarImg = storageRef.put(file);
+      
+                  console.log(avatarImg)
+            }
+            // ===========================================================================
+
+            addUser(user.uid, firstname.value, lastname.value, tel.value, city.value, country.value, profx, avatarImg, summary.value);
           })
           .catch(function (error) {
             console.error(error);
