@@ -262,6 +262,14 @@ input {
   margin-top: 2em;
 }
 
+.account-form button {
+  text-align: center;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+}
+
 p .formfield {
   margin: auto;
 }
@@ -315,6 +323,7 @@ input::placeholder {
   display: flex;
   justify-content: center;
   margin-top: 2em;
+  padding-bottom: 2.2em;
 }
 
 .account-form input {
@@ -363,20 +372,37 @@ button input {
   text-align: center;
   margin: auto;
 }
+
+#update {
+  margin: 0 3em;
+  border: 1px solid #0fffcf;
+  background-color: #313131;
+  color: white;
+  border-radius: 2em;
+  box-shadow: 0px 1px 3px black;
+  padding: 0.6em;
+  align-items: center;
+  width: 9em;
+  margin: auto;
+}
 /* For user display, design scheme for the table */
 /* --------------------------------------------- */
+table {
+  table-layout:fixed;
+}
 .userDisp {
   width: 90%;
   margin: 2% 5%;
   border-collapse: collapse;
   border: 1px solid #0fffcf;
+  font-size: 1em;
 }
 .tableHeading {
   text-align: left;
   background-color: #3131318f;
 }
 .tableHeading th {
-  padding: 1em;
+  padding: 1em 0.5em;
   font-size: 1.25rem;
 }
 #userList {
@@ -385,7 +411,7 @@ button input {
 }
 #userList td {
   padding: 1em;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 /* --------------------------------------------- */
 .loader-wrapper {
