@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const user = firebase.auth().currentUser;
             const profx = [...profession.selectedOptions]
             .map(option => option.value);
-            addUser(user.uid, firstname.value, lastname.value, tel.value, city.value, country.value, profx, summary.value);
+            //addUser(user.uid, firstname.value, lastname.value, tel.value, city.value, country.value, profx, summary.value);
             
             // let user = firebase.auth().currentUser;
             // const profx = [...profession.selectedOptions].map(option => option.value);
