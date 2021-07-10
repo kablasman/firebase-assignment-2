@@ -1,19 +1,3 @@
-// button effect
-
-let regButton = document.querySelector('#register')
-
-regButton.addEventListener('click', () => regButton.style.backgroundColor = '#000') 
-
-// pre loader 
-
-const loaderWrapper = document.querySelector('.loader-wrapper')
-const preLoader = document.querySelector('.loader')
-
-setTimeout(function() {
-  loaderWrapper.style.display = 'none';
-  preLoader.style.display = 'none';
-
-}, 2000);
 
 document.addEventListener("DOMContentLoaded", function() {
     const firstname = document.getElementById("firstname");
@@ -104,8 +88,8 @@ document.addEventListener("DOMContentLoaded", function() {
             country.value = '';
             summary.value = '';
             //-----------------------------------------------------------------------------
-            let user = firebase.auth().currentUser;
-            const profx = [...profession.selectedOptions].map(option => option.value);
+            // let user = firebase.auth().currentUser;
+            // const profx = [...profession.selectedOptions].map(option => option.value);
 
             // ===========================================================================
             //  Uploading the user's Avatar image into firebase storage
@@ -129,3 +113,20 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     })
 })
+
+// button effect
+
+let regButton = document.querySelector('#register')
+
+regButton.addEventListener('click', () => regButton.style.backgroundColor = '#000') 
+
+// pre loader 
+
+const loaderWrapper = document.querySelector('.loader-wrapper')
+const preLoader = document.querySelector('.loader')
+
+setTimeout(function() {
+  loaderWrapper.style.display = 'none';
+  preLoader.style.display = 'none';
+
+}, 2000);
