@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log(country)
         console.log(profession)
         console.log(summary)
-     
+
       db.collection("Users")
         .doc(uid)
         .set({
@@ -57,6 +57,7 @@ document.addEventListener("DOMContentLoaded", function() {
             .map(option => option.value);
             addUser(user.uid, firstname.value, lastname.value, tel.value, city.value, country.value, profx, summary.value);
             // To clear out the input fields after a user clicks the 'Create Account Button'
+            //-----------------------------------------------------------------------------
             firstname.value = '';
             lastname.value = '';
             email.value = '';
@@ -65,6 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
             city.value = '';
             country.value = '';
             summary.value = '';
+            //-----------------------------------------------------------------------------
           })
           .catch(function (error) {
             console.error(error);

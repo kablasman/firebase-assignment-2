@@ -2,8 +2,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const email = document.getElementById("email");
     const password = document.getElementById("password");
     const update = document.getElementById("update");
+    const list = document.querySelector('#userList'); // variable to access the ul from account.html with the id = userList
 
-    const db = firebase.firestore()
+    const db = firebase.firestore();
     let userRef = null;
 
     update.addEventListener("click", function () {
@@ -42,6 +43,36 @@ document.addEventListener("DOMContentLoaded", function () {
         window.location = "login.html";
       }
     });
+    // displaying the data of registered users on with contact information.
+    // makeList method is creating list items and displaying the registered users with contact info and profession
+    const makeList = (doc) =>{
+      let li = document.createElement('li');
+      let name = document.createElement('span');
+      let phone = document.createElement('span');
+      let profession = document.createElement('span');
+
+
+      li.setAttribute('user-id', doc.id);
+      li.className = 'userInfo';
+      name.className = 'userName';
+      phone.className = 'userPhone';
+      profession.className = 'userProfession';
+      name.textContent = doc.data().firstname+" "+doc.data().lastname;
+      phone.textContent = doc.data().Tel;
+      profession.textContent = doc.data().Profession[0];  
+
+      li.appendChild(name);
+      li.appendChild(phone);
+      li.appendChild(profession);
+
+      list.appendChild(li);
+    }
+
+    db.collection('Users').get().then((snapshot)=>{
+      snapshot.docs.forEach(doc =>{
+        makeList(doc);
+      })
+    })
   });
 
 
