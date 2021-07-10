@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log("user", user);
       if (user) {
         firebase.auth().signOut();
+        window.location = 'index.html'; // after logout the user must go to the home i.e index.html page
       }
     });
   });

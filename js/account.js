@@ -44,16 +44,17 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
     // displaying the data of registered users on with contact information.
+    //------------------------------------------------------------------------------------------------------------------------------------
     // makeList method is creating list items and displaying the registered users with contact info and profession
     const makeList = (doc) =>{
-      let li = document.createElement('li');
-      let name = document.createElement('span');
-      let phone = document.createElement('span');
-      let profession = document.createElement('span');
+      let tr = document.createElement('tr');
+      let name = document.createElement('td');
+      let phone = document.createElement('td');
+      let profession = document.createElement('td');
 
 
-      li.setAttribute('user-id', doc.id);
-      li.className = 'userInfo';
+      tr.setAttribute('user-id', doc.id);
+      tr.className = 'userInfo';
       name.className = 'userName';
       phone.className = 'userPhone';
       profession.className = 'userProfession';
@@ -61,18 +62,19 @@ document.addEventListener("DOMContentLoaded", function () {
       phone.textContent = doc.data().Tel;
       profession.textContent = doc.data().Profession[0];  
 
-      li.appendChild(name);
-      li.appendChild(phone);
-      li.appendChild(profession);
+      tr.appendChild(name);
+      tr.appendChild(phone);
+      tr.appendChild(profession);
 
-      list.appendChild(li);
+      list.appendChild(tr);
     }
-
+    // getting the data from collection 'Users' from firestore to display on the account.html page
     db.collection('Users').get().then((snapshot)=>{
       snapshot.docs.forEach(doc =>{
         makeList(doc);
       })
     })
+    //------------------------------------------------------------------------------------------------------------------------------------
   });
 
 

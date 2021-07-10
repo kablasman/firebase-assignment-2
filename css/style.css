@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
 
 nav {
   color: white;
@@ -19,7 +19,7 @@ h1 {
   margin: auto;
   text-align: center;
   padding: 1em;
-  font-family: 'Kanit', sans-serif;
+  font-family: "Kanit", sans-serif;
   font-size: 2.4em;
 }
 
@@ -27,7 +27,7 @@ li {
   margin: 4px;
 }
 
-ul  {
+ul {
   margin: auto;
 }
 
@@ -47,7 +47,7 @@ a {
 }
 
 .body-home {
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   background-image: url(../img/marjan-blan-marjanblan-9tqAeLDQT-o-unsplash.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -57,7 +57,7 @@ a {
 }
 
 .body-login {
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   background-color: #6e6e6e;
   background-image: url(../img/marjan-blan-marjanblan-9tqAeLDQT-o-unsplash.jpg);
   background-blend-mode: multiply;
@@ -69,7 +69,7 @@ a {
 }
 
 .body-reg {
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   background-color: #6e6e6e;
   background-image: url(../img/marjan-blan-marjanblan-9tqAeLDQT-o-unsplash.jpg);
   background-blend-mode: multiply;
@@ -80,7 +80,7 @@ a {
 }
 
 .body-account {
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   background-color: #6e6e6e;
   background-image: url(../img/marjan-blan-marjanblan-9tqAeLDQT-o-unsplash.jpg);
   background-blend-mode: multiply;
@@ -92,7 +92,7 @@ a {
 }
 
 .body-logout {
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   background-color: #6e6e6e;
   background-image: url(../img/marjan-blan-marjanblan-9tqAeLDQT-o-unsplash.jpg);
   background-blend-mode: multiply;
@@ -108,7 +108,7 @@ a {
 }
 
 .body-login h1 {
-  font-size: 2.2em; 
+  font-size: 2.2em;
 }
 
 .nav {
@@ -122,7 +122,7 @@ a {
   background-color: transparent;
   border: none;
   padding: 0;
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
 }
 
 div .welcome-button {
@@ -292,7 +292,7 @@ p textarea {
 
 input::placeholder {
   color: #808080;
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
 }
 
 .login-form {
@@ -331,7 +331,6 @@ input::placeholder {
   margin-top: 4em;
   border-bottom: none;
   border-top: 1px solid white;
-
 }
 
 button input {
@@ -364,7 +363,31 @@ button input {
   text-align: center;
   margin: auto;
 }
-
+/* For user display, design scheme for the table */
+/* --------------------------------------------- */
+.userDisp {
+  width: 90%;
+  margin: 2% 5%;
+  border-collapse: collapse;
+  border: 1px solid #0fffcf;
+}
+.tableHeading {
+  text-align: left;
+  background-color: #3131318f;
+}
+.tableHeading th {
+  padding: 1em;
+  font-size: 1.25rem;
+}
+#userList {
+  text-align: left;
+  background-color: rgba(112, 112, 112, 0.658);
+}
+#userList td {
+  padding: 1em;
+  font-size: 1.1rem;
+}
+/* --------------------------------------------- */
 .loader-wrapper {
   position: fixed;
   width: 100%;
@@ -373,9 +396,9 @@ button input {
   justify-content: center;
   align-items: center;
   top: 0;
-  background-color: rgb(0, 0, 0, .9);
+  background-color: rgb(0, 0, 0, 0.9);
 }
-  
+
 .loader {
   border: 13px solid transparent;
   border-top: 13px solid #0fffcf;
@@ -383,18 +406,21 @@ button input {
   border-radius: 50%;
   width: 70px;
   height: 70px;
-  
+
   transition: opacity 0.5s ease;
   animation: spin 2s linear infinite;
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @media screen and (min-width: 45em) {
-  
   .reg-form-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
