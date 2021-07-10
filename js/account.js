@@ -38,12 +38,16 @@ document.addEventListener("DOMContentLoaded", function () {
       if (user) {
         userRef = user;
         getUser(user.uid);
+        firebase.storage().ref(`avaters/${user.uid}.jpg`).getDownloadURL().then(imgUrl => {
+          profileimg.setAttribute('src',imgUrl)
+          console.log(imgUrl);
+        })
       }
       else {
         window.location = "login.html";
       }
     });
-  });
+});
 
 
 // button effect
