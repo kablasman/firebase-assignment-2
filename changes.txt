@@ -1,0 +1,9 @@
+following are the changes in the documents I have made - 
+    account.html - added a ul first to display the users and their info, changed it to a table later.
+                    line number - 33 to 47
+    
+    style.css - added design for the table display on account.html
+                line number - 371 to 395
+    
+    account.js - added the makeList() function to render the table to display the user info.
+                 line numer - 46 to 77

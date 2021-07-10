@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
           firebase.auth().onAuthStateChanged(function(user) {
             if (user) {
-              window.location = "index.html";
+              window.location = "account.html"; // need to redirect the user to the account page
             } 
             // if (user) {
             //   firebase.auth().signOut();
