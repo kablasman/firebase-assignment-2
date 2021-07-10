@@ -56,6 +56,15 @@ document.addEventListener("DOMContentLoaded", function() {
             const profx = [...profession.selectedOptions]
             .map(option => option.value);
             addUser(user.uid, firstname.value, lastname.value, tel.value, city.value, country.value, profx, summary.value);
+            // To clear out the input fields after a user clicks the 'Create Account Button'
+            firstname.value = '';
+            lastname.value = '';
+            email.value = '';
+            password.value = '';
+            tel.value = '';
+            city.value = '';
+            country.value = '';
+            summary.value = '';
           })
           .catch(function (error) {
             console.error(error);
