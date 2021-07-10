@@ -89,7 +89,6 @@ document.addEventListener("DOMContentLoaded", function() {
           .createUserWithEmailAndPassword(email.value, password.value)
           .then(function (data) {
             console.log("data", data);
-<<<<<<< HEAD
             const user = firebase.auth().currentUser;
             const profx = [...profession.selectedOptions]
             .map(option => option.value);
@@ -105,7 +104,6 @@ document.addEventListener("DOMContentLoaded", function() {
             country.value = '';
             summary.value = '';
             //-----------------------------------------------------------------------------
-=======
             let user = firebase.auth().currentUser;
             const profx = [...profession.selectedOptions].map(option => option.value);
 
@@ -124,7 +122,6 @@ document.addEventListener("DOMContentLoaded", function() {
             // ===========================================================================
 
             addUser(user.uid, firstname.value, lastname.value, tel.value, city.value, country.value, profx, avatarImg, summary.value);
->>>>>>> 45e5d8890a9448fcffac3a842bac4ff58c86ddc7
           })
           .catch(function (error) {
             console.error(error);
