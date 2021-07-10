@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //grab data from database, find user based on uid
     function updateUser(uid, first, last) {
-      db.collection("Users").doc(uid).update() ({
+      db.collection("Users").doc(uid).update({
         firstname: first,
         lastname: last,
       }).then(function() {
